@@ -55,11 +55,11 @@ if __name__ == '__main__':
     # Set the path to the image database
     st.sidebar.write('Please select a folder:')
     col_folder = st.sidebar.columns(2)
-    clicked = col_folder[0].button('Folder Picker')
-    clicked2 = col_folder[1].button('Use sample database')
-    if clicked:
+    clicked_choose_folder = col_folder[0].button('Folder Picker')
+    clicked_sample_path = col_folder[1].button('Use sample database')
+    if clicked_choose_folder:
         st.session_state['database_path'] = st.sidebar.text_input('Selected folder database:', filedialog.askdirectory(master=root))
-    elif clicked2:
+    elif clicked_sample_path:
         current_directory = os.path.abspath(os.getcwd())
         st.session_state['database_path'] = os.path.join(current_directory, 'sample_data')
         st.session_state['database_path'] = st.sidebar.text_input('Selected folder database:', value=st.session_state['database_path'])
