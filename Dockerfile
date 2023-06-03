@@ -16,7 +16,6 @@ RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6 git ninja-build 
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Install MMRotate
 RUN conda clean --all
 RUN git clone https://github.com/tanluuuuuuu/Simple-Image-Search.git /Simple-Image-Search
 WORKDIR /Simple-Image-Search
@@ -24,5 +23,4 @@ ENV FORCE_CUDA="1"
 RUN pip install -r requirements.txt
 
 EXPOSE 8501
-
 ENTRYPOINT ["streamlit", "run", "scr/main.py", "--server.port=8501", "--server.address=0.0.0.0"]
