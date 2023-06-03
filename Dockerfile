@@ -9,7 +9,9 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install -r requirements.txt
+RUN git clone https://github.com/tanluuuuuuu/Simple-Image-Search.git .
+
+RUN pip install -r requirements.txt
 
 EXPOSE 8501
 
