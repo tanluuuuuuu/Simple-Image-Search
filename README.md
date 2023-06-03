@@ -1,10 +1,10 @@
 
 # Simple Image Search
 
-The Image Search App is a simple tool that allows users to search for specific images or find visually similar images within a database. It utilizes advanced computer vision techniques to extract features from images and perform similarity matching, enabling various applications such as searching for faces or finding similar products using images.
+The Image Search App is a powerful tool that allows users to search for specific images or find visually similar images within a database. It utilizes advanced computer vision techniques to extract features from images and perform similarity matching, enabling various applications such as searching for faces or finding similar products using images.
 
 ## Features
-- Image Search: Users can search for specific images or similar by uploading an image. The app matches the query against the image database and retrieves relevant results based on image similarity.
+- Image Search: Users can search for specific images by uploading an image or providing a query description. The app matches the query against the image database and retrieves relevant results based on image similarity.
 - Similar Image Retrieval: Users can find visually similar images to a given query image within the database. The app employs advanced image embedding techniques and similarity algorithms to identify images with comparable visual characteristics.
 
 ## Installation
@@ -43,17 +43,25 @@ streamlit run scr/main.py
 ## Docker
 You can also run the Image Search App using Docker. Follow the steps below:
 1. Install Docker on your machine.
-2. Build the Docker image:
+2. Clone the repository: 
+```shell
+git clone https://github.com/tanluuuuuuu/Simple-Image-Search.git
+```
+3. Navigate to the project directory:
+```shell
+cd Simple-Image-Search
+```
+4. Build the Docker image:
 ```shell
 docker build -t img_search .
 ```
-3. Run the Docker container:
+5. Run the Docker container:
 ```shell
 docker run -p 8501:8501 img_search
 ```
-4. Open your web browser and go to http://0.0.0.0:8501 or http://localhost:8051
-5. Provide database path then upload an image to search for similar images.
-6. View the search results and explore visually similar images.
+6. Open your web browser and go to http://0.0.0.0:8501 or http://localhost:8051
+7. Provide database path then upload an image to search for similar images.
+8. View the search results and explore visually similar images.
 
 ## Contributing
 Contributions to the Image Search App are welcome! If you find any bugs or have suggestions for new features, please open an issue or submit a pull request. Follow the guidelines in the CONTRIBUTING.md file for contributing to the project.
