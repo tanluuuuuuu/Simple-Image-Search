@@ -8,15 +8,32 @@ The Image Search App is a powerful tool that allows users to search for specific
 - Similar Image Retrieval: Users can find visually similar images to a given query image within the database. The app employs advanced image embedding techniques and similarity algorithms to identify images with comparable visual characteristics.
 
 ## Installation
-1. Clone the repository: git clone https://github.com/tanluuuuuuu/Simple-Image-Search.git
-2. Navigate to the project directory: cd Simple-Image-Search
-3. Install the required dependencies: pip install -r requirements.txt
+Image Search depends on PyTorch, Faiss and Streamlit. Below are quick steps for installation.
+```shell
+conda create --name img_search python=3.8.10
+conda activate img_search
+conda install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia
+git clone https://github.com/tanluuuuuuu/Simple-Image-Search.git
+cd Simple-Image-Search
+pip install -r requirements.txt
+```
 
 ## Usage
-1. Start the application: python app.py
-2. Open your web browser and go to http://localhost:5000
-3. Upload an image or provide a query description to search for similar images.
-4. View the search results and explore visually similar images.
+1. Activate the environment: 
+```shell
+conda activate img_search
+```
+2. Navigate to the project directory:
+```shell
+cd Simple-Image-Search
+```
+3. Start the application: 
+```shell
+streamlit run scr/main.py
+```
+4. It will automatically open your web browser. If it doesn't, open your web browser and go to http://0.0.0.0:8501 or http://localhost:5000
+5. Upload an image or provide a query description to search for similar images.
+6. View the search results and explore visually similar images.
 
 ## Technologies Used
 - Programming Language: Python
@@ -28,13 +45,13 @@ You can also run the Image Search App using Docker. Follow the steps below:
 1. Install Docker on your machine.
 2. Build the Docker image:
 ```shell
-docker build -t image-search-app .
+docker build -t img_search .
 ```
 3. Run the Docker container:
 ```shell
-docker run -p 8051:8051 image-search-app
+docker run -p 8501:8501 img_search
 ```
-4. Open your web browser and go to http://localhost:8051
+4. Open your web browser and go to http://0.0.0.0:8501 or http://localhost:8051
 5. Provide database path then upload an image to search for similar images.
 6. View the search results and explore visually similar images.
 
