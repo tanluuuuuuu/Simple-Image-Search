@@ -22,4 +22,7 @@ RUN git clone https://github.com/tanluuuuuuu/Simple-Image-Search.git /Simple-Ima
 WORKDIR /Simple-Image-Search
 ENV FORCE_CUDA="1"
 RUN pip install -r requirements.txt
-RUN pip install --no-cache-dir -e .
+
+EXPOSE 8501
+
+ENTRYPOINT ["streamlit", "run", "scr/main.py", "--server.port=8501", "--server.address=0.0.0.0"]
