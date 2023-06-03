@@ -1,5 +1,5 @@
 data
-
+checkmodel.py 
 # Ignore compiled files and build directories
 *.o
 *.pyc
