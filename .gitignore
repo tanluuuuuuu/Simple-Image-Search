@@ -1,2 +1,47 @@
 data
-check_model.py
+
+# Ignore compiled files and build directories
+*.o
+*.pyc
+__pycache__/
+build/
+dist/
+
+# Ignore local development configuration
+.env
+config.ini
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+
+# Ignore dependency directories
+venv/
+node_modules/
+
+# Ignore generated files
+*.log
+*.bak
+*.swp
+
+# Ignore sensitive or personal files
+secrets.json
+credentials.json
+private.key
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore compiled binaries or executables
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore package lock files
+package-lock.json
+yarn.lock
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
