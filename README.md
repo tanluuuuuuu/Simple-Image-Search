@@ -1,10 +1,10 @@
 
 # Simple Image Search
 
-The Image Search App is a powerful tool that allows users to search for specific images or find visually similar images within a database. It utilizes advanced computer vision techniques to extract features from images and perform similarity matching, enabling various applications such as searching for faces or finding similar products using images.
+The Image Search App is a simple tool that allows users to search for specific images or find visually similar images within a database. It utilizes advanced computer vision techniques to extract features from images and perform similarity matching, enabling various applications such as searching for faces or finding similar products using images.
 
 ## Features
-- Image Search: Users can search for specific images by uploading an image or providing a query description. The app matches the query against the image database and retrieves relevant results based on image similarity.
+- Image Search: Users can search for specific images or similar by uploading an image. The app matches the query against the image database and retrieves relevant results based on image similarity.
 - Similar Image Retrieval: Users can find visually similar images to a given query image within the database. The app employs advanced image embedding techniques and similarity algorithms to identify images with comparable visual characteristics.
 
 ## Installation
