@@ -115,7 +115,7 @@ if __name__ == '__main__':
 
         # Compute the embedding of the query image
         embedding = return_image_embedding(img, st.session_state['model'], st.session_state['preprocess'], device)
-        embedding = np.array(dtype=np.float32)
+        embedding = np.array(embedding, dtype=np.float32)
         # Perform similarity search using the faiss index
         D, I = st.session_state['fs_idx'].search(embedding, num_output)
 
@@ -131,7 +131,7 @@ if __name__ == '__main__':
     if search_key != "":
         # Compute the embedding of the query text
         embedding = return_text_embedding(search_key, st.session_state['clip_model'], device)
-        embedding = np.array(dtype=np.float32)
+        embedding = np.array(embedding, dtype=np.float32)
         # Perform similarity search using the faiss index
         D, I = st.session_state['fs_idx_clip'].search(embedding, num_output)
 
