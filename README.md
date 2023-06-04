@@ -33,7 +33,7 @@ cd Simple-Image-Search
 ```shell
 streamlit run scr/main.py
 ```
-4. It will automatically open your web browser. If it doesn't, open your web browser and go to http://0.0.0.0:8501 or http://localhost:5000
+4. It will automatically open your web browser. If it doesn't, open your web browser and go to http://localhost:5000
 5. Upload an image or provide a query description to search for similar images.
 6. View the search results and explore visually similar images.
 
