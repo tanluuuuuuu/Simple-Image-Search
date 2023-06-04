@@ -27,7 +27,7 @@ def build_faiss(progress_bar, database_path, model, preprocess, d, device):
                 # st.write(error)
                 continue
     
-    xb = np.array(xb)
+    xb = np.array(xb, dtype=np.float32)
     index.add(xb)
     
     return index, img_names

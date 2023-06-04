@@ -31,7 +31,7 @@ def build_faiss_clip(progress_bar, database_path, model, preprocess, device):
             except Exception as error:
                 # st.write(error)
                 continue
-    xb = np.array(xb)
+    xb = np.array(xb, dtype=np.float32)
     index.add(xb)
     
     return index, img_names
