@@ -13,6 +13,8 @@ Image Search depends on PyTorch, Faiss and Streamlit. Below are quick steps for 
 conda create --name img_search python=3.8.10
 conda activate img_search
 conda install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia
+pip install ftfy regex tqdm
+pip install git+https://github.com/openai/CLIP.git
 git clone https://github.com/tanluuuuuuu/Simple-Image-Search.git
 cd Simple-Image-Search
 pip install -r requirements.txt
