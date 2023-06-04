@@ -33,7 +33,7 @@ cd Simple-Image-Search
 ```shell
 streamlit run scr/main.py
 ```
-4. It will automatically open your web browser. If it doesn't, open your web browser and go to http://localhost:5000
+4. It will automatically open your web browser. If it doesn't, open your web browser and go to http://localhost:8501 or http://0.0.0.0:8501 
 5. Upload an image or provide a query description to search for similar images.
 6. View the search results and explore visually similar images.
 
@@ -61,7 +61,7 @@ docker build -t img_search .
 ```shell
 docker run -p 8501:8501 img_search
 ```
-6. Open your web browser and go to http://localhost:8051
+6. Open your web browser and go to http://localhost:8051 or http://0.0.0.0:8501
 7. Provide database path then upload an image to search for similar images.
 8. View the search results and explore visually similar images.
 
