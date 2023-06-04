@@ -61,7 +61,7 @@ docker build -t img_search .
 ```shell
 docker run -p 8501:8501 img_search
 ```
-6. Open your web browser and go to http://0.0.0.0:8501 or http://localhost:8051
+6. Open your web browser and go to http://localhost:8051
 7. Provide database path then upload an image to search for similar images.
 8. View the search results and explore visually similar images.
 
