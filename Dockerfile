@@ -17,10 +17,11 @@ RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6 git ninja-build 
     && rm -rf /var/lib/apt/lists/*
 
 RUN conda clean --all
-# RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 RUN git clone https://github.com/tanluuuuuuu/Simple-Image-Search.git /Simple-Image-Search
 WORKDIR /Simple-Image-Search
 ENV FORCE_CUDA="1"
+RUN pip install ftfy regex tqdm
+RUN pip install git+https://github.com/openai/CLIP.git
 RUN pip install -r requirements.txt
 
 EXPOSE 8501
