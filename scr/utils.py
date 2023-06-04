@@ -4,6 +4,7 @@ import numpy as np
 import streamlit as st
 import math
 from torchvision.io import read_image
+import torch
 
 def build_faiss(progress_bar, database_path, model, preprocess, d, device):
     nb = len(os.listdir(database_path))
@@ -17,12 +18,14 @@ def build_faiss(progress_bar, database_path, model, preprocess, d, device):
         img_names.append(img_name)
         img_path = os.path.join(database_path, img_name)
         img = read_image(img_path)
-        try:
-            batch = preprocess(img).unsqueeze(0).to(device)
-            embedding = model(batch)['output'].squeeze(0).detach().cpu().numpy()
-            xb.append(embedding)
-        except Exception as error:
-            continue
+        with torch.no_grad():
+            try:
+                batch = preprocess(img).unsqueeze(0).to(device)
+                embedding = model(batch)['output'].squeeze(0).detach().cpu().numpy()
+                xb.append(embedding)
+            except Exception as error:
+                # st.write(error)
+                continue
     
     xb = np.array(xb)
     index.add(xb)

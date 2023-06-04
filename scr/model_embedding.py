@@ -5,6 +5,9 @@ from torchvision.models import vit_b_16, resnet50, resnet101, resnet152, mobilen
 from torchvision.models.feature_extraction import create_feature_extractor
 import torchvision.transforms.functional as TF
 
+import clip
+from utils import *
+
 def init_model(name, device):
     # Define the available model options and their corresponding weights
     model_options = {
